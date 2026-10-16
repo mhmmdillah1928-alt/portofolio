@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1a1b26">
+  <meta name="theme-color" content="#11131b">
   <meta name="description" content="Portofolio Mohammad Adillah Khaidir, mahasiswa Sistem Informasi dan pengembang web.">
   <title>Mohammad Adillah Khaidir — Web Developer</title>
 
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://github.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +16,7 @@
 
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-root-margin="0px 0px -45%" tabindex="0">
-  <nav id="mainNavbar" class="navbar navbar-expand-lg sticky-top site-nav">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Navigasi utama">
     <div class="container">
       <a class="navbar-brand" href="#home">Mohammad Adillah Khaidir</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Buka navigasi">
@@ -23,11 +24,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto align-items-lg-center pt-2 pt-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
           <li class="nav-item"><a class="nav-link" href="#certificates">Sertifikat</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-sm btn-outline-custom" href="mailto:mhmmdillah1928@gmail.com"><i class="bi bi-envelope me-1" aria-hidden="true"></i> Email saya</a></li>
         </ul>
       </div>
@@ -41,15 +42,14 @@
           <div class="col-12 col-md-5 col-lg-5 hero-photo-column">
             <div class="hero-photo-wrap">
               <img class="hero-photo" src="https://github.com/mhmmdillah1928-alt.png" alt="Avatar GitHub Mohammad Adillah Khaidir" width="400" height="400" fetchpriority="high">
-              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Mahasiswa aktif</span>
             </div>
           </div>
           <div class="col-12 col-md-7 col-lg-7">
             <div class="hero-copy">
-              <p class="hero-greeting mb-2"><span class="text-cyan">Halo, saya</span> 👋</p>
+              <p class="hero-greeting mb-2"><span class="hero-greeting-line" aria-hidden="true"></span>Halo, Saya <span aria-hidden="true">👋</span></p>
               <h1 class="hero-title">Mohammad<br><span>Adillah Khaidir</span></h1>
-              <p class="hero-subtitle mb-0">Mahasiswa Sistem Informasi · Web Developer</p>
-              <p class="hero-description">Saya mahasiswa Universitas Pamulang yang tertarik membangun solusi digital melalui pengembangan web, sistem basis data, dan aplikasi full-stack.</p>
+              <p class="hero-subtitle mb-0">Full Stack Developer <span aria-hidden="true">·</span> Software Engineer</p>
+              <p class="hero-description">Saya berfokus membangun solusi digital dari antarmuka hingga backend, dengan perhatian pada kualitas kode, sistem basis data, dan pengalaman pengguna.</p>
               <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
                 <a class="btn btn-accent" href="#projects"><i class="bi bi-grid-1x2 me-2" aria-hidden="true"></i>Lihat Proyek</a>
                 <a class="btn btn-outline-custom" href="#contact"><i class="bi bi-send me-2" aria-hidden="true"></i>Hubungi Saya</a>
@@ -71,7 +71,7 @@
         <div class="row justify-content-center text-center mb-5">
           <div class="col-lg-8">
             <p class="section-kicker mb-2">Kenali saya</p>
-            <h2 class="section-title mb-3">About Me</h2>
+            <h2 class="section-title mb-3">Tentang Saya</h2>
             <p class="section-copy mx-auto mb-0">Membangun teknologi yang berguna, mudah dipahami, dan dibuat dengan perhatian pada detail.</p>
           </div>
         </div>
@@ -80,7 +80,7 @@
             <article class="about-card">
               <div class="about-icon mb-3"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
               <h3 class="h5 text-light fw-bold">Pendidikan</h3>
-              <p class="text-muted-custom mb-0">Saya sedang menempuh studi Sistem Informasi di Universitas Pamulang. Perkuliahan memperluas pemahaman saya tentang teknologi, proses bisnis, dan cara merancang sistem informasi.</p>
+              <p class="text-muted-custom mb-0">Saya sedang menempuh kuliah di Program Studi Sistem Informasi, Universitas Pamulang. Perkuliahan memperluas pemahaman saya tentang teknologi, proses bisnis, dan perancangan sistem informasi.</p>
             </article>
           </div>
           <div class="col-md-6 col-lg-5">
@@ -99,7 +99,7 @@
         <div class="row align-items-end gy-3 mb-5">
           <div class="col-md-7">
             <p class="section-kicker mb-2">Teknologi yang digunakan</p>
-            <h2 class="section-title">Tech Stack</h2>
+            <h2 class="section-title">Teknologi</h2>
           </div>
           <div class="col-md-5">
             <p class="section-copy mb-0 ms-md-auto">Perangkat dan teknologi yang saya gunakan dalam belajar serta mengembangkan proyek.</p>
@@ -111,11 +111,11 @@
               <div class="stack-icon mb-3"><i class="bi bi-window-stack" aria-hidden="true"></i></div>
               <h3 class="mb-1">Frontend</h3>
               <p class="text-muted-custom small mb-3">Antarmuka web yang responsif dan mudah digunakan.</p>
-              <div class="d-flex flex-wrap gap-2">
-                <img class="tech-badge" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-                <img class="tech-badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-                <img class="tech-badge" src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap 5">
-                <img class="tech-badge" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=222222" alt="JavaScript">
+              <div class="tech-list" aria-label="Teknologi frontend">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Bootstrap 5</span>
+                <span class="tech-pill">JavaScript</span>
               </div>
             </article>
           </div>
@@ -124,11 +124,11 @@
               <div class="stack-icon mb-3"><i class="bi bi-database" aria-hidden="true"></i></div>
               <h3 class="mb-1">Backend & Database</h3>
               <p class="text-muted-custom small mb-3">Logika aplikasi dan penyimpanan data.</p>
-              <div class="d-flex flex-wrap gap-2">
-                <img class="tech-badge" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-                <img class="tech-badge" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-                <img class="tech-badge" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-                <img class="tech-badge" src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
+              <div class="tech-list" aria-label="Teknologi backend dan database">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Supabase</span>
               </div>
             </article>
           </div>
@@ -137,10 +137,10 @@
               <div class="stack-icon mb-3"><i class="bi bi-tools" aria-hidden="true"></i></div>
               <h3 class="mb-1">Tools</h3>
               <p class="text-muted-custom small mb-3">Alat bantu kolaborasi dan pengembangan.</p>
-              <div class="d-flex flex-wrap gap-2">
-                <img class="tech-badge" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img class="tech-badge" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-                <img class="tech-badge" src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code">
+              <div class="tech-list" aria-label="Development tools">
+                <span class="tech-pill">Git</span>
+                <span class="tech-pill">GitHub</span>
+                <span class="tech-pill">VS Code</span>
               </div>
             </article>
           </div>
@@ -220,22 +220,43 @@
         <div class="row align-items-end gy-3 mb-5">
           <div class="col-md-7">
             <p class="section-kicker mb-2">Karya pilihan</p>
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Proyek</h2>
           </div>
           <div class="col-md-5">
-            <p class="section-copy mb-0 ms-md-auto">Proyek yang telah saya bangun dan dipublikasikan secara online.</p>
+            <p class="section-copy mb-0 ms-md-auto">Eksplorasi solusi digital untuk kebutuhan bisnis, analisis data, dan produktivitas.</p>
           </div>
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
             <article class="project-card">
-              <div class="project-visual purple"><i class="bi bi-person-workspace" aria-hidden="true"></i></div>
+              <div class="project-visual"><i class="bi bi-box-seam" aria-hidden="true"></i></div>
               <div class="project-body">
-                <p class="section-kicker small mb-2">Web Development</p>
-                <h3>Personal Portfolio</h3>
-                <p>Website portofolio personal untuk memperkenalkan profil, keterampilan, proyek, dan cara menghubungi saya.</p>
-                <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span></div>
-                <a class="project-link mt-2" href="https://mhmmdillah1928-alt.github.io/portofolio/" target="_blank" rel="noopener noreferrer">Kunjungi Website <i class="bi bi-arrow-up-right ms-1" aria-hidden="true"></i></a>
+                <p class="section-kicker small mb-2">Studi Kasus · Full Stack</p>
+                <h3>Sistem Inventaris</h3>
+                <p>Konsep aplikasi untuk mencatat stok, memantau pergerakan barang, dan membantu usaha kecil mengelola persediaan.</p>
+                <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-visual green"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div>
+              <div class="project-body">
+                <p class="section-kicker small mb-2">Studi Kasus · Data</p>
+                <h3>Dashboard Analitik Penjualan</h3>
+                <p>Konsep dashboard untuk merangkum tren penjualan dan menyajikan metrik bisnis melalui visualisasi yang mudah dipahami.</p>
+                <div class="project-tags"><span>JavaScript</span><span>MongoDB</span><span>Data Visualization</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-visual purple"><i class="bi bi-kanban" aria-hidden="true"></i></div>
+              <div class="project-body">
+                <p class="section-kicker small mb-2">Studi Kasus · Web App</p>
+                <h3>Aplikasi Manajemen Tugas</h3>
+                <p>Konsep aplikasi produktivitas untuk mengatur tugas, status pekerjaan, dan kolaborasi dalam satu tempat.</p>
+                <div class="project-tags"><span>JavaScript</span><span>Supabase</span><span>Responsive UI</span></div>
               </div>
             </article>
           </div>
@@ -277,6 +298,37 @@
               </div>
             </div>
           </div>
+          <div class="contact-form-section">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <p class="section-kicker mb-2">Kirim pesan</p>
+                <h3 class="contact-form-title">Mari mulai percakapan</h3>
+                <p class="text-muted-custom mb-0">Isi formulir ini dan pesan akan disiapkan di WhatsApp.</p>
+              </div>
+              <div class="col-lg-8">
+                <form id="whatsappContactForm" class="contact-form">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="contactName">Nama</label>
+                      <input class="form-control" id="contactName" name="name" type="text" autocomplete="name" maxlength="80" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="contactEmail">Email</label>
+                      <input class="form-control" id="contactEmail" name="email" type="email" autocomplete="email" maxlength="120" required>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="contactMessage">Pesan</label>
+                      <textarea class="form-control" id="contactMessage" name="message" rows="4" maxlength="1000" required></textarea>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3">
+                      <button class="btn btn-accent" type="submit"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i>Kirim lewat WhatsApp</button>
+                      <p id="contactFormStatus" class="contact-form-status mb-0" aria-live="polite">WhatsApp akan terbuka agar Anda dapat meninjau dan mengirim pesan.</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -284,8 +336,8 @@
 
   <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content" style="border: 1px solid var(--line); background: var(--panel);">
-        <div class="modal-header" style="border-color: var(--line);">
+      <div class="modal-content certificate-modal-content">
+        <div class="modal-header certificate-modal-header">
           <h2 class="modal-title fs-5" id="certificateModalTitle">Pratinjau sertifikat</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
         </div>
