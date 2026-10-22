@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-5">
+          <div class="col-md-6 col-lg-5" hidden>
             <article class="about-card">
               <div class="about-icon mb-3"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
               <h3 class="h5 text-light fw-bold">Pendidikan</h3>
@@ -223,40 +223,24 @@
             <h2 class="section-title">Proyek</h2>
           </div>
           <div class="col-md-5">
-            <p class="section-copy mb-0 ms-md-auto">Eksplorasi solusi digital untuk kebutuhan bisnis, analisis data, dan produktivitas.</p>
+            <p class="section-copy mb-0 ms-md-auto">Proyek yang sudah dapat dicoba secara langsung.</p>
           </div>
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
             <article class="project-card">
-              <div class="project-visual"><i class="bi bi-box-seam" aria-hidden="true"></i></div>
+              <div class="project-visual cyan"><i class="bi bi-calculator" aria-hidden="true"></i></div>
               <div class="project-body">
-                <p class="section-kicker small mb-2">Studi Kasus · Full Stack</p>
-                <h3>Sistem Inventaris</h3>
-                <p>Konsep aplikasi untuk mencatat stok, memantau pergerakan barang, dan membantu usaha kecil mengelola persediaan.</p>
-                <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="project-card">
-              <div class="project-visual green"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div>
-              <div class="project-body">
-                <p class="section-kicker small mb-2">Studi Kasus · Data</p>
-                <h3>Dashboard Analitik Penjualan</h3>
-                <p>Konsep dashboard untuk merangkum tren penjualan dan menyajikan metrik bisnis melalui visualisasi yang mudah dipahami.</p>
-                <div class="project-tags"><span>JavaScript</span><span>MongoDB</span><span>Data Visualization</span></div>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="project-card">
-              <div class="project-visual purple"><i class="bi bi-kanban" aria-hidden="true"></i></div>
-              <div class="project-body">
-                <p class="section-kicker small mb-2">Studi Kasus · Web App</p>
-                <h3>Aplikasi Manajemen Tugas</h3>
-                <p>Konsep aplikasi produktivitas untuk mengatur tugas, status pekerjaan, dan kolaborasi dalam satu tempat.</p>
-                <div class="project-tags"><span>JavaScript</span><span>Supabase</span><span>Responsive UI</span></div>
+                <p class="section-kicker small mb-2">Full-Stack Web Development</p>
+                <h3>PHP Interactive Logic &amp; Utility Dashboard</h3>
+                <p>Dashboard dark mode yang menyatukan empat modul logika dan kalkulasi dalam satu antarmuka interaktif, dibangun dengan PHP 8.2 modular dan Tailwind CSS.</p>
+                <div class="project-tags"><span>PHP 8.2</span><span>Tailwind CSS</span><span>JavaScript ES6</span></div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button class="btn btn-accent btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#phpProjectModal">Lihat detail</button>
+                  <a class="btn btn-outline-custom btn-sm" href="https://php-logic-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    Coba proyek <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
             </article>
           </div>
@@ -334,6 +318,80 @@
     </section>
   </main>
 
+  <div class="modal fade" id="phpProjectModal" tabindex="-1" aria-labelledby="phpProjectModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content certificate-modal-content">
+        <div class="modal-header certificate-modal-header">
+          <h2 class="modal-title fs-5" id="phpProjectModalTitle">PHP Interactive Logic &amp; Utility Dashboard</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body text-muted-custom">
+          <h3 class="h6 text-light fw-bold">Overview</h3>
+          <p>Aplikasi web modular yang mengumpulkan latihan logika pemrograman dasar (kalkulasi, pengkondisian, dan pengolahan array) dalam satu dashboard dark mode. Setiap modul berjalan sendiri tetapi berbagi tampilan dan fungsi yang sama.</p>
+          <h3 class="h6 text-light fw-bold">Fitur Utama</h3>
+          <ul>
+            <li><strong>Kalkulator:</strong> aritmetika dasar dengan penanganan pembagian dengan nol.</li>
+            <li><strong>Status Kelulusan:</strong> penentuan predikat nilai ujian dengan if-else.</li>
+            <li><strong>Array Angka Acak:</strong> 10 angka acak (1–100); ganjil terkecil, genap terbesar, dan selisih rentang.</li>
+            <li><strong>Array Asosiatif:</strong> nilai 5 mata kuliah dengan rata-rata otomatis.</li>
+            <li><strong>Salin Teks:</strong> menyalin penjelasan alur kode dengan satu klik (JavaScript).</li>
+          </ul>
+          <h3 class="h6 text-light fw-bold">Tech Stack</h3>
+          <ul>
+            <li><strong>PHP 8.2:</strong> logika server dan struktur modular.</li>
+            <li><strong>Tailwind CSS:</strong> styling dark mode yang responsif.</li>
+            <li><strong>JavaScript ES6 &amp; HTML5:</strong> interaksi klien dan struktur semantik.</li>
+            <li><strong>FontAwesome &amp; Plus Jakarta Sans:</strong> ikon dan tipografi.</li>
+          </ul>
+          <h3 class="h6 text-light fw-bold">Arsitektur &amp; Best Practices</h3>
+          <ul class="mb-0">
+            <li>index.php sebagai pustaka fungsi bersama (renderHead, renderFooter) sehingga perubahan tampilan berlaku di semua modul.</li>
+            <li>Helper escaping untuk sanitasi output dan pencegahan XSS.</li>
+            <li>Penanganan error eksplisit untuk kasus tepi seperti pembagian dengan nol.</li>
+            <li>UI konsisten dan responsif; modul baru mudah ditambahkan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="phpProjectModal" tabindex="-1" aria-labelledby="phpProjectModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content certificate-modal-content">
+        <div class="modal-header certificate-modal-header">
+          <h2 class="modal-title fs-5" id="phpProjectModalTitle">PHP Interactive Logic &amp; Utility Dashboard</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body text-muted-custom">
+          <h3 class="h6 text-light fw-bold">Overview</h3>
+          <p>Aplikasi web modular yang mengumpulkan latihan logika pemrograman dasar (kalkulasi, pengkondisian, dan pengolahan array) dalam satu dashboard dark mode. Setiap modul berjalan sendiri tetapi berbagi tampilan dan fungsi yang sama.</p>
+          <h3 class="h6 text-light fw-bold">Fitur Utama</h3>
+          <ul>
+            <li><strong>Kalkulator:</strong> aritmetika dasar dengan penanganan pembagian dengan nol.</li>
+            <li><strong>Status Kelulusan:</strong> penentuan predikat nilai ujian dengan if-else.</li>
+            <li><strong>Array Angka Acak:</strong> 10 angka acak (1–100); ganjil terkecil, genap terbesar, dan selisih rentang.</li>
+            <li><strong>Array Asosiatif:</strong> nilai 5 mata kuliah dengan rata-rata otomatis.</li>
+            <li><strong>Salin Teks:</strong> menyalin penjelasan alur kode dengan satu klik (JavaScript).</li>
+          </ul>
+          <h3 class="h6 text-light fw-bold">Tech Stack</h3>
+          <ul>
+            <li><strong>PHP 8.2:</strong> logika server dan struktur modular.</li>
+            <li><strong>Tailwind CSS:</strong> styling dark mode yang responsif.</li>
+            <li><strong>JavaScript ES6 &amp; HTML5:</strong> interaksi klien dan struktur semantik.</li>
+            <li><strong>FontAwesome &amp; Plus Jakarta Sans:</strong> ikon dan tipografi.</li>
+          </ul>
+          <h3 class="h6 text-light fw-bold">Arsitektur &amp; Best Practices</h3>
+          <ul class="mb-0">
+            <li>index.php sebagai pustaka fungsi bersama (renderHead, renderFooter) sehingga perubahan tampilan berlaku di semua modul.</li>
+            <li>Helper escaping untuk sanitasi output dan pencegahan XSS.</li>
+            <li>Penanganan error eksplisit untuk kasus tepi seperti pembagian dengan nol.</li>
+            <li>UI konsisten dan responsif; modul baru mudah ditambahkan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content certificate-modal-content">
@@ -356,6 +414,9 @@
       </div>
     </div>
   </footer>
+
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+  <div id="toastContainer" class="toast-stack" aria-live="polite" aria-atomic="false"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>

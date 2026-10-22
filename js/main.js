@@ -1,5 +1,38 @@
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const toastIcons = { success: "bi-check-circle-fill", info: "bi-info-circle-fill", warning: "bi-exclamation-triangle-fill", danger: "bi-x-circle-fill" };
+const showToast = (message, type = "info", delay = 4000) => {
+  const toast = document.createElement("div");
+  toast.className = `toast app-toast app-toast-${type}`;
+  toast.setAttribute("role", type === "danger" ? "alert" : "status");
+  const body = document.createElement("div");
+  body.className = "d-flex align-items-start gap-2 p-3";
+  const icon = document.createElement("i");
+  icon.className = `bi ${toastIcons[type] || toastIcons.info} toast-icon`;
+  icon.setAttribute("aria-hidden", "true");
+  const text = document.createElement("div");
+  text.className = "flex-grow-1";
+  text.textContent = message;
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "btn-close btn-close-white";
+  close.setAttribute("aria-label", "Tutup notifikasi");
+  close.setAttribute("data-bs-dismiss", "toast");
+  body.append(icon, text, close);
+  toast.append(body);
+  document.querySelector("#toastContainer").append(toast);
+  toast.addEventListener("hidden.bs.toast", () => toast.remove());
+  bootstrap.Toast.getOrCreateInstance(toast, { delay }).show();
+};
+
+window.addEventListener("load", () => {
+  setTimeout(() => showToast("Selamat datang di portofolio saya! 👋", "info"), 600);
+});
+
+const backToTop = document.querySelector("#backToTop");
+backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+window.addEventListener("scroll", () => backToTop.classList.toggle("is-visible", window.scrollY > 400), { passive: true });
+
 const certificateModal = document.querySelector("#certificateModal");
 const certificateFrame = certificateModal.querySelector(".certificate-frame");
 certificateModal.addEventListener("show.bs.modal", (event) => {
@@ -7,6 +40,7 @@ certificateModal.addEventListener("show.bs.modal", (event) => {
   certificateModal.querySelector("#certificateModalTitle").textContent = trigger.dataset.certificateTitle;
   certificateFrame.src = trigger.dataset.certificateFile;
   certificateFrame.title = `Pratinjau PDF ${trigger.dataset.certificateTitle}`;
+  showToast(`Membuka ${trigger.dataset.certificateTitle}...`, "info", 2500);
 });
 certificateModal.addEventListener("hidden.bs.modal", () => {
   certificateFrame.removeAttribute("src");
@@ -71,6 +105,12 @@ const whatsappContactForm = document.querySelector("#whatsappContactForm");
 whatsappContactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  if (!whatsappContactForm.checkValidity()) {
+    whatsappContactForm.reportValidity();
+    showToast("Mohon lengkapi semua kolom dengan benar.", "warning");
+    return;
+  }
+
   const formData = new FormData(whatsappContactForm);
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
@@ -86,7 +126,14 @@ whatsappContactForm.addEventListener("submit", (event) => {
   ].join("\n");
   const whatsappUrl = `https://wa.me/6283144452466?text=${encodeURIComponent(whatsappMessage)}`;
 
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  if (opened) {
+    showToast("Pesan siap dikirim! WhatsApp dibuka di tab baru.", "success");
+    whatsappContactForm.reset();
+  } else {
+    showToast("Pop-up diblokir browser. Izinkan pop-up lalu coba lagi.", "danger", 6000);
+    return;
+  }
   document.querySelector("#contactFormStatus").textContent =
     "Pesan sudah disiapkan di WhatsApp. Tinjau lalu tekan Kirim untuk mengirimkannya.";
 });
